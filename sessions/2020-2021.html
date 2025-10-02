@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,15 +30,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-914ee4f9c63d60221354e1c2dee7045e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-82e59692a55e7b89b399f330c29c6001.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -101,13 +103,15 @@ window.Quarto = {
 <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">QGS</span>
     </a>
@@ -131,23 +135,23 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-past-sessions">    
         <li>
-    <a class="dropdown-item" href="../sessions/session_2024-2025.html">
+    <a class="dropdown-item" href="../sessions/2024-2025.html">
  <span class="dropdown-text">Session 2024-2025</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2023-2024.html">
+    <a class="dropdown-item" href="../sessions/2023-2024.html">
  <span class="dropdown-text">Session 2023-2024</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2022-2023.html">
+    <a class="dropdown-item" href="../sessions/2022-2023.html">
  <span class="dropdown-text">Session 2022-2023</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2021-2022.html">
+    <a class="dropdown-item" href="../sessions/2021-2022.html">
  <span class="dropdown-text">Session 2021-2022</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2020-2021.html">
+    <a class="dropdown-item" href="../sessions/2020-2021.html">
  <span class="dropdown-text">Session 2020-2021</span></a>
   </li>  
     </ul>
@@ -203,7 +207,7 @@ window.Quarto = {
 <li><p><strong>Title</strong>: Furstenberg boundary of a discrete quantum group.</p></li>
 <li><p><strong>Abstract</strong>: The notion of topological boundary actions has recently found striking applications in the study of operator algebras associated to discrete groups. We will discuss the analogue concept for discrete quantum groups, show that in this generalization there still always exists a maximal boundary action - the so-called Furstenberg boundary. We discuss applications in problems of C*-simplicity and uniqueness of the Haar state of the dual.</p>
 <p>This is joint work with Pawel Kasprzak, Adam Skalski and Roland Vergnioux.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk1 - MehrdadKalantar (09-11-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk1 - MehrdadKalantar (09-11-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -213,7 +217,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: On the Baum-Connes conjecture for discrete quantum groups with torsion and the quantum Rosenberg Conjecture.</p></li>
 <li><p><strong>Abstract</strong>: We give a decomposition of the equivariant Kasparov category for a discrete quantum group with torsions. This formulates the Baum-Connes assembly map for general discrete quantum groups possibly with torsion. As an application, we show that the group C*-algebra of a discrete quantum group in a certain class satisfies the UCT.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk2- YukiArano (16-11-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk2- YukiArano (16-11-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -223,7 +227,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: A quantization of Sylvester’s law of inertia.</p></li>
 <li><p><strong>Abstract</strong>: Sylvester’s law of inertia states that two self-adjoint matrices <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> are related as <span class="math inline">\(A = X*BX\)</span> for some invertible complex matrix <span class="math inline">\(X\)</span> if and only if <span class="math inline">\(A\)</span> and <span class="math inline">\(B\)</span> have the same signature <span class="math inline">\((N_+,N_-,N_0)\)</span>, i.e.&nbsp;the same number of positive, negative and zero eigenvalues. In this talk, we will discuss a quantized version of this law: we consider the reflection equation <em>-algebra (REA), which is a quantization of the </em>-algebra of polynomial functions on self-adjoint matrices, together with a natural adjoint action by quantum <span class="math inline">\(GL(N,C)\)</span>. We then show that to each irreducible bounded *-representation of the REA can be associated an extended signature <span class="math inline">\((N_+,N_-,N_0,[r])\)</span> with <span class="math inline">\([r]\)</span> in <span class="math inline">\(\mathbb{R}/\mathbb{Z}\)</span>, and we will explain in what way this is a complete invariant of the orbits under the action by quantum <span class="math inline">\(GL(N,C)\)</span>. This is part of a work in progress jointly with Stephen Moore.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk3 - KennyDeCommer (23-11-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk3 - KennyDeCommer (23-11-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -233,7 +237,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: The spectrum of equivariant Kasparov theory for cyclic groups of prime order.</p></li>
 <li><p><strong>Abstract</strong>: In 2006, Ralf Meyer and Ryszard Nest proved that the <span class="math inline">\(G\)</span>-equivariant Kasparov category of a locally compact group <span class="math inline">\(G\)</span> carries the structure of a tensor-triangulated category. This structure conveniently handles the usual homological algebra, bootstrap constructions and assembly maps involved in many KK-theoretical calculations, e.g.&nbsp;in connection with the Baum-Connes conjecture. As with any tensor triangulated category, we can also associate to the G-equivariant Kasparov category its spectrum in the sense of Paul Balmer. This is a topological space (similar to the Zariski spectrum of a commutative ring) which allows us, as it were, to re-inject some genuinely geometric ideas in non-commutative geometry. It turns out that the spectrum contains enough information to prove the Baum-Connes conjecture for <span class="math inline">\(G\)</span>, hence we should expect the question of its computation to be very hard. In this talk, after discussing such preliminaries and motivation, I will present joint work with Ralf Meyer providing the state of the art on this subject. Although more general partial results are known, a complete answer is only known so far for finite groups of prime order and for algebras in the bootstrap category.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk4 - IvoDellAmbrogio (30-11-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk4 - IvoDellAmbrogio (30-11-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -249,7 +253,7 @@ window.Quarto = {
 <li><p>The class is stable under monoidal equivalence, free products, dual quantum subgroups and wreath products with <span class="math inline">\(S_N^+\)</span>.</p></li>
 </ol>
 <p>The rigidity properties include the Akemann-Ostrand property and strong solidity. Part of this talk is based on joint work with Mateusz Wasilewski and Yusuke Isono.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk5 - MartijnCaspers (07-12-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk5 - MartijnCaspers (07-12-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -259,7 +263,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Dynamics of compact quantum metric spaces.</p></li>
 <li><p><strong>Abstract</strong>: The classical Gelfand correspondence justifies the slogan that <span class="math inline">\(C^*\)</span>-algebras are to be thought of as “non-commutative Hausdorff spaces”, and Rieffel’s theory of compact quantum metric spaces provides, in the same vein, a non-commutative counterpart to the theory of compact metric spaces. The aim of my talk is to introduce the basics of this theory, and explain some new results on dynamical systems of compact quantum metric spaces. If time permits, I will also touch upon another recent result, which shows how quantized intervals approximate a classical interval in the quantum version of the Gromov-Hausdorff distance. This is based on joint works with Jens Kaad and Thomas Gotfredsen.</p></li>
-<li><p><a href="slides_2020-2021/1Autumn Session 2020-2021/Talk6 - DavidKyed (14-12-2020).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/1Autumn Session 2020-2021/Talk6 - DavidKyed (14-12-2020).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 </section>
@@ -272,7 +276,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Discrete subfactors, realization of algebra objects, and <span class="math inline">\(Q\)</span>-system completion.</p></li>
 <li><p><strong>Abstract</strong>: In recent decades, we have seen that quantum symmetries of quantum mathematical objects, like non-commutative spaces and quantum field theories, are best described by quantum groups, subfactors, and unitary tensor categories. Subfactor classification has led to discovery of interesting “exotic” quantum symmetries and to important constructions for unitary tensor categories. For example, <span class="math inline">\(Q\)</span>-systems (special <span class="math inline">\(^C*\)</span> Frobnius algebra objects) were introduced by Longo to characterize the canonical endomorphism for type III subfactors, which is the analog of Jones’ basic construction for type II_1 and Kosaki’s version for type III. We will use this perspective to discuss some subfactor results which go beyond small index classification, making connections to quantum groups along the way. We’ll then discuss a version of a unitary higher idempotent completion for <span class="math inline">\(C^*\)</span>/<span class="math inline">\(W^*\)</span> <span class="math inline">\(2\)</span>-categories based on Gaiotto–Johnson-Freyd’s theory of condensations in higher categories.</p></li>
-<li><p><a href="slides_2020-2021/2Winter Session 2020-2021/Talk1 - DavidPenneys (11-01-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/2Winter Session 2020-2021/Talk1 - DavidPenneys (11-01-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -282,7 +286,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: About the monoidal invariance of cohomological dimension of Hopf algebras.</p></li>
 <li><p><strong>Abstract</strong>: I will discuss the question whether Hopf algebras having monoidally equivalent category of comodules have the same cohomological dimension, and I will present a new positive answer.</p></li>
-<li><p><a href="slides_2020-2021/2Winter Session 2020-2021/Talk2 - JulienBichon (18-01-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/2Winter Session 2020-2021/Talk2 - JulienBichon (18-01-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -292,7 +296,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Quantum Cuntz-Krieger algebras.</p></li>
 <li><p><strong>Abstract</strong>: The notion of a quantum graph, a concept going back to work of Erdos-Katavolos-Shulman and Weaver, provides a noncommutative generalisation of finite graphs. Quantum graphs play an intriguing role in the analysis of quantum symmetries of graphs via monoidal equivalences, and naturally appear also in quantum information theory. In this talk, I will discuss the construction of certain C*-algebras associated with directed quantum graphs, in analogy to the definition of Cuntz-Krieger algebras, and illustrate this with some examples. (Joint work with M. Brannan, K. Eifler, M. Weber).</p></li>
-<li><p><a href="slides_2020-2021/2Winter Session 2020-2021/Talk3 - ChristianVoigt (25-01-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/2Winter Session 2020-2021/Talk3 - ChristianVoigt (25-01-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -302,7 +306,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: How to (badly) quantum shuffle cards.</p></li>
 <li><p><strong>Abstract</strong>: Card shuffles can be thought of as random walks on the symmetric group, and the study of these random walks has been a subject of interest to probabilists for more than forty years. Even for one of the simplest examples, the random transposition walk, precise results concerning the convergence to equilibrium were only very recently obtained. After briefly describing that setting, I will report on a joint work with L. Teyssier and S. Wang where we study an analogue of the random transposition walk on the quantum symmetric group, therefore a kind of “quantum card shuffle”. In particular, we obtain a similar asymptotic description of the convergence to equilibrium, called the “limit profile”, involving the free Poisson distribution while the classical case involved the usual Poisson distribution.</p></li>
-<li><p><a href="slides_2020-2021/2Winter Session 2020-2021/Talk4 - AmauryFreslon (15-02-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/2Winter Session 2020-2021/Talk4 - AmauryFreslon (15-02-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -315,7 +319,7 @@ window.Quarto = {
 <p>We develop a general framework for (noncommutative) support data, coming in three different flavors, and show that <span class="math inline">\(\text{Spc} {\mathbf K}\)</span> is a universal terminal object for the first two notions (support and weak support). The first two types of support data are then used in a theorem that gives a method for the explicit classification of the thick (two-sided) ideals and the Balmer spectrum of an M<span class="math inline">\(\Delta\)</span>C. The third type (quasi support) is used in another theorem that provides a method for the explicit classification of the thick right ideals of <span class="math inline">\(\mathbf K\)</span>, which in turn can be applied to classify the thick two-sided ideals and <span class="math inline">\(\text{Spc} {\mathbf K}\)</span>.</p>
 <p>If time permits applications will be given for quantum groups and non-cocommutative finite-dimensional Hopf algebras studied by Benson and Witherspoon.</p>
 <p>This is joint and ongoing work with Milen Yakimov and Kent Vashaw.</p></li>
-<li><p><a href="slides_2020-2021/2Winter Session 2020-2021/Talk5 - DanielNakano (22-02-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/2Winter Session 2020-2021/Talk5 - DanielNakano (22-02-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -347,7 +351,7 @@ window.Quarto = {
 <li><p><strong>Title</strong>: Quantum affine algebras and spectral <span class="math inline">\(k\)</span>-matrices.</p></li>
 <li><p><strong>Abstract</strong>: The Yang-Baxter equation (YBE) and the reflection equation (RE) are two fundamental symmetries in mathematics arising from particles moving along a line or a half-line. The quest for constant solutions of YBE (<span class="math inline">\(R\)</span>-matrices) is at the very origin of the Drinfeld-Jimbo quantum groups and their universal R-matrix. Similarly, constant solutions of RE (<span class="math inline">\(k\)</span>-matrices) naturally appear in the context of quantum symmetric pairs (QSP).</p>
 <p>In joint work with Bart Vlaar, we construct a discrete family of universal <span class="math inline">\(k\)</span>-matrices associated to an arbitrary quantum symmetric Kac-Moody pair as operators on category O integrable representations. This generalises previous results by Balagovic-Kolb and Bao-Wang valid for finite-type QSP. In this talk, I will explain how, in affine type, this construction gives rise to parameter-dependent operators (spectral <span class="math inline">\(k\)</span>-matrices) on finite-dimensional representations of quantum loop algebras solving the same RE introduced by Cherednik and Sklyanin in the 1980s in the context of quantum integrability near a boundary.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk1 - AndreaAppel (22-03-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk1 - AndreaAppel (22-03-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -357,7 +361,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Quantum Galois Group of Subfactors.</p></li>
 <li><p><strong>Abstract</strong>: In this talk, I prove the existence of a universal (terminal) object in a number of categories of Hopf algebras acting on a given subfactor <span class="math inline">\(N \subset M\)</span> (finite index, type II_1) such that N is in the fixed point subalgebra of the action. These universal Hopf algebras can be interpreted as a quantum group version of Galois group of the subfactor. We compute such universal quantum groups for certain class of subfactors, notably those coming outer actions of finite dimensional Hopf <span class="math inline">\(*\)</span> algebras (joint work with Suvrajit Bhattacharjee and Alex Chirvsitu).</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk2 - DebashishGoswami (29-03-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk2 - DebashishGoswami (29-03-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -386,7 +390,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Cluster realization of spherical DAHA.</p></li>
 <li><p><strong>Abstract</strong>: Spherical subalgebra of Cherednik’s double affine Hecke algebra of type A admits a polynomial representation in which its generators act via elementary symmetric functions and Macdonald operators. Recognizing the elementary symmetric functions as eigenfunctions of quantum Toda Hamiltonians, and applying (the inverse of) the Toda spectral transform, one obtains a new representation of spherical DAHA. In this talk, I will discuss how this new representation gives rise to an injective homomorphism from the spherical DAHA into a quantum cluster algebra in such a way that the action of the modular group on the former is realized via cluster transformations. The talk is based on a joint work in progress with Philippe Di Francesco, Rinat Kedem, and Gus Schrader.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk5 - AlexanderShapiro (26-04-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk5 - AlexanderShapiro (26-04-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -396,7 +400,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Actions of fusion categories on topological spaces.</p></li>
 <li><p><strong>Abstract</strong>: Fusion categories are algebraic objects which generalize the representation categories of finite quantum groups. We define an action of a (unitary) fusion category <span class="math inline">\(C\)</span> on a compact Hausdorff space <span class="math inline">\(X\)</span> to be a <span class="math inline">\(C\)</span>-module category structure on <span class="math inline">\(\text{Hilb}(X)\)</span>, the category of finite dimensional Hilbert bundles over a compact Hausdorff space <span class="math inline">\(X\)</span>. When <span class="math inline">\(X\)</span> is connected, we discuss obstructions to the existence of such actions and describe techniques for building examples.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk6 - CoreyJones (03-05-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk6 - CoreyJones (03-05-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -415,7 +419,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Quantum groups and nonlocal games.</p></li>
 <li><p><strong>Abstract</strong>: In this talk I will explain how quantum groups arise in quantum information theory via a class of graph based nonlocal games. Our point of departure will be an interactive protocol (nonlocal game) where two provers try to convince a verifier that two graphs are isomorphic. Allowing provers to take advantage of shared quantum mechanical resources will then allow us to define quantum isomorphism of graphs as the ability of quantum players to win the corresponding game with certainty. We will see that quantum isomorphism can be naturally reformulated in the language of quantum groups.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk8 - LauraMančiska (24-05-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk8 - LauraManciska (24-05-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -428,7 +432,7 @@ window.Quarto = {
 <p>We propose here a categorical approach to partial symmetries and the globalization question, explaining several of the existing results and, at the same time, providing a procedure to construct globalizations in concrete contexts of interest. Our approach relies on the notion of geometric partial comodules, recently introduced by Hu and Vercruysse in order to describe partial actions of algebraic groups from a Hopf-algebraic point of view.</p>
 <p>Unlike classical partial actions, which exist only for (topological) groups and Hopf algebras, geometric partial comodules can be defined over any coalgebra in a monoidal category with pullbacks and they allow to describe phenomena that are out of the reach of the theory of partial (co)actions, even in the Hopf algebra framework. At the same time, geometric partial comodules allow to approach in a unified way partial actions of groups on sets, partial coactions of Hopf algebras on algebras and partial (co)actions of Hopf algebras on vector spaces. Thus, the question of studying the existence (and uniqueness) of globalization for geometric partial comodules naturally arises as a unifying way to address the issue.</p>
 <p>Based on a joint work with Joost Vercruysse.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk9 - PaoloSaracco (31-05-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk9 - PaoloSaracco (31-05-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -438,7 +442,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Hopf algebras in SupLat and set-theoretical YBE solutions.</p></li>
 <li><p><strong>Abstract</strong>: Skew braces have recently attracted attention as a method to study set-theoretical solutions of the Yang-Baxter equation. In this talk, we will present a new approach for studying these solutions, by looking at Hopf algebras in the category of complete lattices and join-preserving morphisms, denoted by SupLat. Any Hopf algebra, <span class="math inline">\(H\)</span> in SupLat, has a corresponding group, <span class="math inline">\(R(H)\)</span>, which we call its remnant and a co-quasitriangular structure on <span class="math inline">\(H\)</span> induces a brading operator on <span class="math inline">\(R(H)\)</span>, which induces a skew brace structure on <span class="math inline">\(R(H)\)</span>. From this correspondence, we will recover several aspects of the theory of skew braces. In particular, we will construct the universal skew brace of a set-theoretical YBE solution, as the remnant of an FRT-type reconstruction in SupLat.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk10 - AryanGhobadi (07-06-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk10 - AryanGhobadi (07-06-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -448,7 +452,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Equivariant spectral triple for the compact quantum group <span class="math inline">\(U_q(2)\)</span> for complex deformation parameters.</p></li>
 <li><p><strong>Abstract</strong>: Let <span class="math inline">\(q=|q|e^{i\pi\theta}\)</span> be a nonzero complex number such that <span class="math inline">\(|q|\neq 1\)</span>, and consider the compact quantum group <span class="math inline">\(U_q(2)\)</span>. In this talk, we discuss a complete list of inequivalent irreducible representations of ¢ and its Peter-Weyl decomposition. Then, for <span class="math inline">\(\theta\notin \mathbb{Q}\backslash\{0,1\}\)</span>, we discuss the K-theory of the underlying <span class="math inline">\(C^*\)</span>-algebra <span class="math inline">\(C(U_q(2))\)</span>, and a spectral triple which is equivariant under its own comultiplication action. The spectral triple obtained here is even, <span class="math inline">\(4^+\)</span>-summable, non-degenerate, and the Dirac operator acts on two copies of the <span class="math inline">\(L^2\)</span>-space of <span class="math inline">\(U_q(2)\)</span>. The Chern character of the associated Fredholm module is nontrivial.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk11 - SatyajitGuin (14-06-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk11 - SatyajitGuin (14-06-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -458,7 +462,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Orthogonal vs unitary in the case of “easy” quantum groups.</p></li>
 <li><p><strong>Abstract</strong>: We consider quantum subgroups of Wang’s free orthogonal quantum group on the one hand and of his free unitary quantum group on the other. In the first case, the generators of the underlying <span class="math inline">\(C^*\)</span>-algebras are selfadjoint which is dropped in the latter case. We compare these two cases along the lines of so called “easy” quantum groups and we observe that the step from the orthogonal to the unitary case is huge. This is a survey talk on the landscape of “easy” quantum groups with a particular emphasis on the differences between the orthogonal and the unitary case.</p></li>
-<li><p><a href="slides_2020-2021/3Spring Session 2020-2021/Talk12 - MoritzWeber (21-06-2021).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2020-2021/3Spring Session 2020-2021/Talk12 - MoritzWeber (21-06-2021).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 
@@ -467,236 +471,243 @@ window.Quarto = {
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -704,185 +715,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

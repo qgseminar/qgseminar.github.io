@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.6.42">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -30,15 +30,17 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7b89279ff1a6dce999919e0e67d4d9ec.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap-914ee4f9c63d60221354e1c2dee7045e.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-82e59692a55e7b89b399f330c29c6001.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -82,7 +84,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -101,13 +103,15 @@ window.Quarto = {
 <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 
-<body class="nav-fixed fullcontent">
+<body class="nav-fixed fullcontent quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="../index.html" class="navbar-brand navbar-brand-logo">
+    </a>
     <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">QGS</span>
     </a>
@@ -131,23 +135,23 @@ window.Quarto = {
     </a>
     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="nav-menu-past-sessions">    
         <li>
-    <a class="dropdown-item" href="../sessions/session_2024-2025.html">
+    <a class="dropdown-item" href="../sessions/2024-2025.html">
  <span class="dropdown-text">Session 2024-2025</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2023-2024.html">
+    <a class="dropdown-item" href="../sessions/2023-2024.html">
  <span class="dropdown-text">Session 2023-2024</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2022-2023.html">
+    <a class="dropdown-item" href="../sessions/2022-2023.html">
  <span class="dropdown-text">Session 2022-2023</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2021-2022.html">
+    <a class="dropdown-item" href="../sessions/2021-2022.html">
  <span class="dropdown-text">Session 2021-2022</span></a>
   </li>  
         <li>
-    <a class="dropdown-item" href="../sessions/session_2020-2021.html">
+    <a class="dropdown-item" href="../sessions/2020-2021.html">
  <span class="dropdown-text">Session 2020-2021</span></a>
   </li>  
     </ul>
@@ -203,7 +207,7 @@ window.Quarto = {
 <li><p><strong>Title</strong>: Quantum Cayley graphs.</p></li>
 <li><p><strong>Abstract</strong>: I will talk about a method of associating a quantum graph to a discrete quantum group together with a projection in its function algebra. These quantum graphs are analogues of Cayley graphs and they do not depend on the choice of a generating projection in the sense of metric geometry. Later I will show how they can help in finding examples of finite quantum groups having Frucht property, i.e.&nbsp;arising as quantum automorphism groups of quantum graphs.</p>
 <p>Part of the talk will be based on an on-going joint work with Michael Brannan and Adam Skalski.</p></li>
-<li><p><a href="slides_2023-2024/1Autumn Session 2023-2024/Talk1 - MateuszWasilewski (16-10-2023).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/1Autumn Session 2023-2024/Talk1 - MateuszWasilewski (16-10-2023).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -232,7 +236,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Crystallizing compact semisimple Lie groups.</p></li>
 <li><p><strong>Abstract</strong>: The theory of crystal bases is a means of simplifying the representation theory of semisimple Lie algebras by passing through quantum groups. Varying the parameter q of the quantized enveloping algebras, we pass from the classical theory at <span class="math inline">\(​q=1\)</span> through the Drinfeld-Jimbo algebras at <span class="math inline">\(0&lt;q&lt;1\)</span> to the crystal limit at <span class="math inline">\(q=0\)</span>. At this point, the main features of the representation theory crystallize into purely combinatorial data described by crystal graphs. In this talk, we will describe what happens to the <span class="math inline">\(C^*\)</span>-algebra of functions on a compact semisimple Lie group under the crystallization process, yielding higher-rank graph algebras. This is joint work with Marco Matassa.</p></li>
-<li><p><a href="slides_2023-2024/1Autumn Session 2023-2024/Talk4 - RobertYuncken (20-11-2023).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/1Autumn Session 2023-2024/Talk4 - RobertYuncken (20-11-2023).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -253,7 +257,7 @@ window.Quarto = {
 <li><p><strong>Title</strong>: Proper actions, fixed-point algebras, and deformation via coactions.</p></li>
 <li><p><strong>Abstract</strong>: The notion of proper actions of groups on spaces has various generalizations for group actions of noncommutative <span class="math inline">\(C^*\)</span>-algebras <span class="math inline">\(A\)</span>, which all allow the construction of generalized fixed-point algebras <span class="math inline">\(A^G\)</span> which are Morita equivalent to ideals in the reduced crossed products <span class="math inline">\(A\ltimes G\)</span>. The weakest version was introduced by Rieffel in 1990 and it played an important role in his theory of deformations via actions of <span class="math inline">\(\mathbb{R}^d\)</span>.</p>
 <p>In this talk we want to report on some joint work with Alcides Buss on a version of proper actions which allows the construction of maximal (or exotic) generalized fixed-point algebras which are Morita equivalent to ideals in the maximal (resp. exotic) crossed products. We will report on several applications including Landstad duality for coactions and deformation of <span class="math inline">\(C^*\)</span>-algebras via coactions in the sense of Kasprzak and Bowmick, Neshveyev, and Sangha.</p></li>
-<li><p><a href="slides_2023-2024/1Autumn Session 2023-2024/Talk6 - SiegfriedEchterhoff (04-12-2023).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/1Autumn Session 2023-2024/Talk6 - SiegfriedEchterhoff (04-12-2023).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 </section>
@@ -266,7 +270,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Gaussian Parts of Compact Quantum Groups.</p></li>
 <li><p><strong>Abstract</strong>: We introduce the Gaussian part of a compact quantum group <span class="math inline">\(G\)</span>, namely the largest quantum subgroup of <span class="math inline">\(G\)</span> supporting all the Gaussian functionals of <span class="math inline">\(G\)</span>. We prove that the Gaussian part is always contained in the Kac part, and characterise Gaussian parts of classical compact groups, duals of classical discrete groups and q-deformations of compact Lie groups. The notion turns out to be related to a new concept of “strong connectedness” and we exhibit several examples of both strongly connected and totally strongly disconnected compact quantum groups. Joint work with Amaury Freslon and Adam Skalski.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk1 - UweFranz (22-01-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk1 - UweFranz (22-01-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -276,7 +280,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Equivariant injectivity of crossed products.</p></li>
 <li><p><strong>Abstract</strong>: We introduce the notion of a <span class="math inline">\(G\)</span>-operator space, which consists of an action of a locally compact quantum group <span class="math inline">\(G\)</span> on an operator space <span class="math inline">\(X\)</span>, and we study the notion of <span class="math inline">\(G\)</span>-equivariant injectivity for such an operator space. We define a natural associated crossed product operator space <span class="math inline">\(X \rtimes G\)</span>, on which both the locally compact quantum group <span class="math inline">\(G\)</span> and its dual act. We completely characterise when these crossed products are equivariantly injective with respect to these actions. We discuss how these results generalise and unify several recent results from the literature and we give some new applications.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk2 - JoeriDeRo (29-01-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk2 - JoeriDeRo (29-01-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -286,7 +290,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Intertwining techniques for actions of <span class="math inline">\(C^*\)</span>-tensor categories.</p></li>
 <li><p><strong>Abstract</strong>: Intertwining techniques, first used in the realm of <span class="math inline">\(C^*\)</span>-algebras in Elliott’s classification of AF-algebras, have been essential in the classification theory of <span class="math inline">\(C^*\)</span>-algebras and their group actions. In this talk I will discuss intertwining and how it appears in <span class="math inline">\(C^*\)</span>-classification, I will then outline an adaptation of these techniques to the tensor category equivariant setting. Time permitting I will discuss an application of these techniques to the study of tensor category equivariant Jiang-Su stability.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk3 - SergioGironPacheco (05-02-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk3 - SergioGironPacheco (05-02-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -296,7 +300,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Quantum-symmetric equivalence via Manin’s universal quantum groups.</p></li>
 <li><p><strong>Abstract</strong>: We study <span class="math inline">\(2\)</span>-cocycle (and more generally quantum-symmetric equivalences between) twists of graded algebras via their associated universal quantum groups, in the sense of Manin. We prove that Zhang twists arise as a special case of <span class="math inline">\(2\)</span>-cocycle twist, and that <span class="math inline">\(2\)</span>-cocyle twisting preserves many fundamental homological invariants of graded algebras. As a consequence, we give a characterization of Artin–Schelter regular algebras using the language of <span class="math inline">\(2\)</span>-cocycle twists.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk4 - KentVashaw (12-02-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk4 - KentVashaw (12-02-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -306,7 +310,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Induced functors on Drinfeld centers.</p></li>
 <li><p><strong>Abstract</strong>: I will explain how the right/left adjoint of a monoidal functor induced a braided lax/oplax monoidal functors between the corresponding Drinfeld centers. This requires some mild technical assumptions, namely that the projection formulas hold for the adjoint functor. This holds, for example, when the monoidal categories are rigid. As the induced functors on the Drinfeld centers are (op)lax and compatible with braiding, they preserve commutative (co)algebra objects. As classes of examples, we consider monoidal restriction functors along extensions of Hopf algebras leading to (co)induction functors on Yetter-Drinfeld module categories. This is joint work in progress with Johannes Flake (Bonn) and Sebastian Posur (Münster).</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk5 - RobertLaugwitz (19-02-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk5 - RobertLaugwitz (19-02-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -316,7 +320,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: No-signalling values of cooperative quantum games.</p></li>
 <li><p><strong>Abstract</strong>: Finding values, the optimal winning probability, of various non-local games over different strategies has been an important task in Quantum Information Theory and also for resolving the Connes Embedding Problem. In this talk I will discuss values of quantum games (games with quantum inputs and outputs), arising from the type hierarchy of quantum no-signalling correlations, establishing operator space tensor norm expressions for each of the correlation types. This is a joint work with Jason Crann, Rupert Levene and Ivan Todorov.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk6 - Lyudmila Turowska (04-03-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk6 - Lyudmila Turowska (04-03-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -326,7 +330,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Growth in tensor powers.</p></li>
 <li><p><strong>Abstract</strong>: This talk is based on joint work with K.Coulembier, P.Etingof, D.Tubbenhauer. Let <span class="math inline">\(G\)</span> be any group and let <span class="math inline">\(V\)</span> be a finite dimensional representation of <span class="math inline">\(G\)</span> over some field. We consider tensor powers of <span class="math inline">\(V\)</span> and their decompositions into indecomposable summands. The main question which will be addressed in this talk: what can we say about count (e.g.&nbsp;total number) of these indecomposable summands? It turns out that there are reasonable partial answers to this question asymptotically, i.e.&nbsp;when the tensor power is large.</p></li>
-<li><p><a href="slides_2023-2024/2Winter Session 2023-2024/Talk7 - VictorOstrik (11-03-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/2Winter Session 2023-2024/Talk7 - VictorOstrik (11-03-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 </section>
@@ -348,7 +352,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Compact Matrix Quantum Group Equivariant Neural Networks.</p></li>
 <li><p><strong>Abstract</strong>: In deep learning, we would like to develop principled approaches for constructing neural networks. One important approach involves identifying symmetries that are inherent in data and then encoding them into neural network architectures using representations of groups. However, there exist so-called “quantum symmetries” that cannot be understood formally by groups. In this talk, we show how to construct neural networks that are equivariant to compact matrix quantum groups using Woronowicz’s version of Tannaka-Krein duality. We go on to characterise the linear weight matrices that appear in these neural networks for a class of compact matrix quantum groups known as “easy”. In particular, we show that every compact matrix group equivariant neural network is a compact matrix quantum group equivariant neural network.</p></li>
-<li><p><a href="slides_2023-2024/3Spring Session 2023-2024/Talk2 - EdwardPearceCrump (20-05-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/3Spring Session 2023-2024/Talk2 - EdwardPearceCrump (20-05-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -358,7 +362,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Modular invariants of quantum groups.</p></li>
 <li><p><strong>Abstract</strong>: A very interesting feature of compact quantum groups is that their Haar integral, which is a normal state on <span class="math inline">\(L^\infty(G)\)</span>, can be non-tracial. Via Tomita-Takesaki theory, this gives rise to two groups of automorphisms: modular automorphisms and scaling automorphisms. One can use them to define a number of invariants, related to whether these automorphisms are trivial, inner or approximately inner. During the talk I’ll introduce such invariants (also in the general locally compact case), discuss a conjecture related to one of them, and present their calculation in the case of q-deformed compact, simply connected, semisimple Lie group <span class="math inline">\(G_q\)</span>. The talk is based on a joint work with Piotr Sołtan.</p></li>
-<li><p><a href="slides_2023-2024/3Spring Session 2023-2024/Talk3 - JacekKrajczok (27-05-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/3Spring Session 2023-2024/Talk3 - JacekKrajczok (27-05-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -368,7 +372,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Maximal amenability of the radial subalgebra in free quantum groups factors.</p></li>
 <li><p><strong>Abstract</strong>: The free orthogonal quantum groups <span class="math inline">\(O^+(N)\)</span>, introduced by Shuzhou Wang, are monoidally equivalent to the <span class="math inline">\(SU_q(2)\)</span> compact quantum groups, but on an analytical level they behave much like the quantum duals of the classical free groups, when <span class="math inline">\(N &gt; 2\)</span>. I will review their definition and main properties, and present a new result about the maximal amenability of the associated radial MASA, obtained in recent joint work with Xumin Wang.</p></li>
-<li><p><a href="slides_2023-2024/3Spring Session 2023-2024/Talk4 - RolandVergnioux (03-06-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/3Spring Session 2023-2024/Talk4 - RolandVergnioux (03-06-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -387,7 +391,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Cayley graphs: Symmetries, quantizations, duality.</p></li>
 <li><p><strong>Abstract</strong>:</p></li>
-<li><p><a href="slides_2023-2024/3Spring Session 2023-2024/Talk6 - DanielGromada (17-06-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/3Spring Session 2023-2024/Talk6 - DanielGromada (17-06-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -397,7 +401,7 @@ window.Quarto = {
 <ul>
 <li><p><strong>Title</strong>: Spectra of quantum algebras.</p></li>
 <li><p><strong>Abstract</strong>: The talk will survey what is known and/or conjectured about the prime and primitive spectra of quantum algebras, particularly quantized coordinate rings and related algebras such as quantized Weyl algebras. The topological structure of these spectra, their relations with classical algebraic varieties, and their relations with each other will be discussed.</p></li>
-<li><p><a href="slides_2023-2024/3Spring Session 2023-2024/Talk7 - KenGoodearl (24-06-2024).pdf"><strong>Slides</strong></a></p></li>
+<li><p><a href="../slides/2023-2024/3Spring Session 2023-2024/Talk7 - KenGoodearl (24-06-2024).pdf"><strong>Slides</strong></a></p></li>
 </ul>
 </details>
 <details>
@@ -415,236 +419,243 @@ window.Quarto = {
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
-window.document.addEventListener("DOMContentLoaded", function (event) {
-  const toggleBodyColorMode = (bsSheetEl) => {
-    const mode = bsSheetEl.getAttribute("data-mode");
-    const bodyEl = window.document.querySelector("body");
-    if (mode === "dark") {
-      bodyEl.classList.add("quarto-dark");
-      bodyEl.classList.remove("quarto-light");
-    } else {
-      bodyEl.classList.add("quarto-light");
-      bodyEl.classList.remove("quarto-dark");
-    }
-  }
-  const toggleBodyColorPrimary = () => {
-    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
-    if (bsSheetEl) {
-      toggleBodyColorMode(bsSheetEl);
-    }
-  }
-  toggleBodyColorPrimary();  
-  const icon = "";
-  const anchorJS = new window.AnchorJS();
-  anchorJS.options = {
-    placement: 'right',
-    icon: icon
-  };
-  anchorJS.add('.anchored');
-  const isCodeAnnotation = (el) => {
-    for (const clz of el.classList) {
-      if (clz.startsWith('code-annotation-')) {                     
-        return true;
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
       }
+      return false;
     }
-    return false;
-  }
-  const onCopySuccess = function(e) {
-    // button target
-    const button = e.trigger;
-    // don't keep focus
-    button.blur();
-    // flash "checked"
-    button.classList.add('code-copy-button-checked');
-    var currentTitle = button.getAttribute("title");
-    button.setAttribute("title", "Copied!");
-    let tooltip;
-    if (window.bootstrap) {
-      button.setAttribute("data-bs-toggle", "tooltip");
-      button.setAttribute("data-bs-placement", "left");
-      button.setAttribute("data-bs-title", "Copied!");
-      tooltip = new bootstrap.Tooltip(button, 
-        { trigger: "manual", 
-          customClass: "code-copy-button-tooltip",
-          offset: [0, -8]});
-      tooltip.show();    
-    }
-    setTimeout(function() {
-      if (tooltip) {
-        tooltip.hide();
-        button.removeAttribute("data-bs-title");
-        button.removeAttribute("data-bs-toggle");
-        button.removeAttribute("data-bs-placement");
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
       }
-      button.setAttribute("title", currentTitle);
-      button.classList.remove('code-copy-button-checked');
-    }, 1000);
-    // clear code selection
-    e.clearSelection();
-  }
-  const getTextToCopy = function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
       for (const childEl of codeEl.children) {
         if (isCodeAnnotation(childEl)) {
           childEl.remove();
         }
       }
       return codeEl.innerText;
-  }
-  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-    text: getTextToCopy
-  });
-  clipboard.on('success', onCopySuccess);
-  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-      text: getTextToCopy,
-      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
     });
-    clipboardModal.on('success', onCopySuccess);
-  }
-    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
-    var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp('/' + window.location.host + '/');
-    var isInternal = (href) => {
-        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
     }
-    // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
-    for (var i=0; i<links.length; i++) {
-      const link = links[i];
-      if (!isInternal(link.href)) {
-        // undo the damage that might have been done by quarto-nav.js in the case of
-        // links that we want to consider external
-        if (link.dataset.originalHref !== undefined) {
-          link.href = link.dataset.originalHref;
-        }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
       }
-    }
-  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
-    const config = {
-      allowHTML: true,
-      maxWidth: 500,
-      delay: 100,
-      arrow: false,
-      appendTo: function(el) {
-          return el.parentElement;
-      },
-      interactive: true,
-      interactiveBorder: 10,
-      theme: 'quarto',
-      placement: 'bottom-start',
-    };
-    if (contentFn) {
-      config.content = contentFn;
-    }
-    if (onTriggerFn) {
-      config.onTrigger = onTriggerFn;
-    }
-    if (onUntriggerFn) {
-      config.onUntrigger = onUntriggerFn;
-    }
-    window.tippy(el, config); 
-  }
-  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
-  for (var i=0; i<noterefs.length; i++) {
-    const ref = noterefs[i];
-    tippyHover(ref, function() {
-      // use id or data attribute instead here
-      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
-      try { href = new URL(href).hash; } catch {}
-      const id = href.replace(/^#\/?/, "");
-      const note = window.document.getElementById(id);
-      if (note) {
-        return note.innerHTML;
-      } else {
-        return "";
-      }
-    });
-  }
-  const xrefs = window.document.querySelectorAll('a.quarto-xref');
-  const processXRef = (id, note) => {
-    // Strip column container classes
-    const stripColumnClz = (el) => {
-      el.classList.remove("page-full", "page-columns");
-      if (el.children) {
-        for (const child of el.children) {
-          stripColumnClz(child);
-        }
-      }
-    }
-    stripColumnClz(note)
-    if (id === null || id.startsWith('sec-')) {
-      // Special case sections, only their first couple elements
-      const container = document.createElement("div");
-      if (note.children && note.children.length > 2) {
-        container.appendChild(note.children[0].cloneNode(true));
-        for (let i = 1; i < note.children.length; i++) {
-          const child = note.children[i];
-          if (child.tagName === "P" && child.innerText === "") {
-            continue;
-          } else {
-            container.appendChild(child.cloneNode(true));
-            break;
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
           }
         }
-        if (window.Quarto?.typesetMath) {
-          window.Quarto.typesetMath(container);
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
         }
-        return container.innerHTML
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
       } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
         if (window.Quarto?.typesetMath) {
           window.Quarto.typesetMath(note);
         }
-        return note.innerHTML;
-      }
-    } else {
-      // Remove any anchor links if they are present
-      const anchorLink = note.querySelector('a.anchorjs-link');
-      if (anchorLink) {
-        anchorLink.remove();
-      }
-      if (window.Quarto?.typesetMath) {
-        window.Quarto.typesetMath(note);
-      }
-      if (note.classList.contains("callout")) {
-        return note.outerHTML;
-      } else {
-        return note.innerHTML;
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
       }
     }
-  }
-  for (var i=0; i<xrefs.length; i++) {
-    const xref = xrefs[i];
-    tippyHover(xref, undefined, function(instance) {
-      instance.disable();
-      let url = xref.getAttribute('href');
-      let hash = undefined; 
-      if (url.startsWith('#')) {
-        hash = url;
-      } else {
-        try { hash = new URL(url).hash; } catch {}
-      }
-      if (hash) {
-        const id = hash.replace(/^#\/?/, "");
-        const note = window.document.getElementById(id);
-        if (note !== null) {
-          try {
-            const html = processXRef(id, note.cloneNode(true));
-            instance.setContent(html);
-          } finally {
-            instance.enable();
-            instance.show();
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
           }
         } else {
-          // See if we can fetch this
-          fetch(url.split('#')[0])
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
           .then(res => res.text())
           .then(html => {
             const parser = new DOMParser();
             const htmlDoc = parser.parseFromString(html, "text/html");
-            const note = htmlDoc.getElementById(id);
+            const note = htmlDoc.querySelector('main.content');
             if (note !== null) {
-              const html = processXRef(id, note);
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
               instance.setContent(html);
             } 
           }).finally(() => {
@@ -652,185 +663,161 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             instance.show();
           });
         }
-      } else {
-        // See if we can fetch a full url (with no hash to target)
-        // This is a special case and we should probably do some content thinning / targeting
-        fetch(url)
-        .then(res => res.text())
-        .then(html => {
-          const parser = new DOMParser();
-          const htmlDoc = parser.parseFromString(html, "text/html");
-          const note = htmlDoc.querySelector('main.content');
-          if (note !== null) {
-            // This should only happen for chapter cross references
-            // (since there is no id in the URL)
-            // remove the first header
-            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
-              note.children[0].remove();
-            }
-            const html = processXRef(null, note);
-            instance.setContent(html);
-          } 
-        }).finally(() => {
-          instance.enable();
-          instance.show();
-        });
-      }
-    }, function(instance) {
-    });
-  }
-      let selectedAnnoteEl;
-      const selectorForAnnotation = ( cell, annotation) => {
-        let cellAttr = 'data-code-cell="' + cell + '"';
-        let lineAttr = 'data-code-annotation="' +  annotation + '"';
-        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
-        return selector;
-      }
-      const selectCodeLines = (annoteEl) => {
-        const doc = window.document;
-        const targetCell = annoteEl.getAttribute("data-target-cell");
-        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
-        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
-        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
-        const lineIds = lines.map((line) => {
-          return targetCell + "-" + line;
-        })
-        let top = null;
-        let height = null;
-        let parent = null;
-        if (lineIds.length > 0) {
-            //compute the position of the single el (top and bottom and make a div)
-            const el = window.document.getElementById(lineIds[0]);
-            top = el.offsetTop;
-            height = el.offsetHeight;
-            parent = el.parentElement.parentElement;
-          if (lineIds.length > 1) {
-            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
-            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
-            height = bottom - top;
-          }
-          if (top !== null && height !== null && parent !== null) {
-            // cook up a div (if necessary) and position it 
-            let div = window.document.getElementById("code-annotation-line-highlight");
-            if (div === null) {
-              div = window.document.createElement("div");
-              div.setAttribute("id", "code-annotation-line-highlight");
-              div.style.position = 'absolute';
-              parent.appendChild(div);
-            }
-            div.style.top = top - 2 + "px";
-            div.style.height = height + 4 + "px";
-            div.style.left = 0;
-            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
-            if (gutterDiv === null) {
-              gutterDiv = window.document.createElement("div");
-              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
-              gutterDiv.style.position = 'absolute';
-              const codeCell = window.document.getElementById(targetCell);
-              const gutter = codeCell.querySelector('.code-annotation-gutter');
-              gutter.appendChild(gutterDiv);
-            }
-            gutterDiv.style.top = top - 2 + "px";
-            gutterDiv.style.height = height + 4 + "px";
-          }
-          selectedAnnoteEl = annoteEl;
-        }
-      };
-      const unselectCodeLines = () => {
-        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
-        elementsIds.forEach((elId) => {
-          const div = window.document.getElementById(elId);
-          if (div) {
-            div.remove();
-          }
-        });
-        selectedAnnoteEl = undefined;
-      };
-        // Handle positioning of the toggle
-    window.addEventListener(
-      "resize",
-      throttle(() => {
-        elRect = undefined;
-        if (selectedAnnoteEl) {
-          selectCodeLines(selectedAnnoteEl);
-        }
-      }, 10)
-    );
-    function throttle(fn, ms) {
-    let throttle = false;
-    let timer;
-      return (...args) => {
-        if(!throttle) { // first call gets through
-            fn.apply(this, args);
-            throttle = true;
-        } else { // all the others get throttled
-            if(timer) clearTimeout(timer); // cancel #2
-            timer = setTimeout(() => {
-              fn.apply(this, args);
-              timer = throttle = false;
-            }, ms);
-        }
-      };
-    }
-      // Attach click handler to the DT
-      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
-      for (const annoteDlNode of annoteDls) {
-        annoteDlNode.addEventListener('click', (event) => {
-          const clickedEl = event.target;
-          if (clickedEl !== selectedAnnoteEl) {
-            unselectCodeLines();
-            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
-            if (activeEl) {
-              activeEl.classList.remove('code-annotation-active');
-            }
-            selectCodeLines(clickedEl);
-            clickedEl.classList.add('code-annotation-active');
-          } else {
-            // Unselect the line
-            unselectCodeLines();
-            clickedEl.classList.remove('code-annotation-active');
-          }
-        });
-      }
-  const findCites = (el) => {
-    const parentEl = el.parentElement;
-    if (parentEl) {
-      const cites = parentEl.dataset.cites;
-      if (cites) {
-        return {
-          el,
-          cites: cites.split(' ')
-        };
-      } else {
-        return findCites(el.parentElement)
-      }
-    } else {
-      return undefined;
-    }
-  };
-  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
-  for (var i=0; i<bibliorefs.length; i++) {
-    const ref = bibliorefs[i];
-    const citeInfo = findCites(ref);
-    if (citeInfo) {
-      tippyHover(citeInfo.el, function() {
-        var popup = window.document.createElement('div');
-        citeInfo.cites.forEach(function(cite) {
-          var citeDiv = window.document.createElement('div');
-          citeDiv.classList.add('hanging-indent');
-          citeDiv.classList.add('csl-entry');
-          var biblioDiv = window.document.getElementById('ref-' + cite);
-          if (biblioDiv) {
-            citeDiv.innerHTML = biblioDiv.innerHTML;
-          }
-          popup.appendChild(citeDiv);
-        });
-        return popup.innerHTML;
+      }, function(instance) {
       });
     }
-  }
-});
-</script>
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
