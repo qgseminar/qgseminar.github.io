@@ -32,7 +32,7 @@
     "href": "events.html",
     "title": "Events & Opps",
     "section": "",
-    "text": "Events\n\nWe provide information on upcoming conferences, workshops, seminars, and other scholarly events relevant to the quantum groups community and related fields.\n\nOperator algebraic quantum groups (Nov 30 - Dec 5, 2025)\nNoncommutative harmonic analysis and quantum information (Jan 25 - 30, 2026)\nTopological quantum groups, quantum symmetries and related topics (Jun 15 - 19, 2026)\n\n\nFunding & Grants\n\n\nCOST Action CaLISTA: The CaLISTA project provides funding for mobility for researchers."
+    "text": "Events\n\nWe provide information on upcoming conferences, workshops, seminars, and other scholarly events relevant to the quantum groups community and related fields.\n\nOperator Algebraic Quantum Groups (Nov 30 - Dec 5, 2025)\nNoncommutative Harmonic Analysis and Quantum Information (Jan 25 - 30, 2026)\n\n\nFunding & Grants\n\n\nCOST Action CaLISTA: The CaLISTA project provides funding for mobility for researchers."
   },
   {
     "objectID": "current.html#autumn-session",
@@ -47,6 +47,13 @@
     "title": "Current",
     "section": "Winter Session",
     "text": "Winter Session\n\n\nJennifer Brown (University of Edinburgh) - January 19, 2026\n\n\nTitle: Parabolic Reduction and Quantum Character Varieties\nAbstract: Character varieties parametrise G-local systems on topological spaces, for G a reductive group. They play a central role in physical models such as Chern-Simons theory and have been widely studied. Many constructions involving character varieties can be formulated with a combination of skein theory and parabolic reduction along a Borel subgroup of G.\nWe’ll tell this story, with the guiding goal of defining quantum cluster coordinates on quantised character varieties. This is based on joint work with David Jordan.\n\n\n\n\nBin Gui (Tsinghua University) - January 26, 2026 at 9:00 am (CET)\n\n\nTitle: Comparison of extensions of unitary VOAs and conformal nets\nAbstract: In 2015, Carpi-Kawahigashi-Longo-Weiner (CKLW) initiated a systematic study of the relationship between unitary vertex operator algebras (UVOAs) and conformal nets (CNs). Building on their framework and Wassermann’s computation of the Connes fusion of modules of loop group SU(N) at positive integer levels, I showed in 2018 and 2020 that many rational UVOAs (including all WZW models) and their corresponding CNs have unitarily equivalent representation categories.\nIn this talk, I will show that when one considers extensions of UVOAs and CNs, the abstract equivalence of representation categories arising from the theory of Frobenius algebras and Q-systems is compatible with the unitary equivalences (in the line of CKLW and Wassermann) mentioned above."
+  },
+  {
+    "objectID": "current.html#spring-session",
+    "href": "current.html#spring-session",
+    "title": "Current",
+    "section": "Spring Session",
+    "text": "Spring Session\n\n\nAlfons Van Daele (KU Leuven) - April 16, 2026\n\n\nTitle: TBA\nAbstract: TBA\n\n\n&lt;!–\n\n\nTBA - TBA, 2026\n\n\nTitle: TBA\nAbstract: TBA\n\n\n&lt;!–\n\n\nTBA - TBA, 2026\n\n\nTitle: TBA\nAbstract: TBA\n\n\n&lt;!–\n\n\nTBA - TBA, 2026\n\n\nTitle: TBA\nAbstract: TBA"
   },
   {
     "objectID": "sessions/2023-2024.html",
